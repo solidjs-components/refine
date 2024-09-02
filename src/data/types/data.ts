@@ -302,15 +302,11 @@ export interface CreateManyParams<TVariables = {}> {
     metaData?: MetaQuery
 }
 
-export interface UpdateParams<TVariables = {}> {
+interface UpdateParams<TVariables = {}> {
     resource: string
     id: BaseKey
     variables: TVariables
     meta?: MetaQuery
-    /**
-     * @deprecated `metaData` is deprecated with refine@4, refine will pass `meta` instead, however, we still support `metaData` for backward compatibility.
-     */
-    metaData?: MetaQuery
 }
 
 export interface UpdateManyParams<TVariables = {}> {

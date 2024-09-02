@@ -1,6 +1,7 @@
 {
     "name": "@solidjs-components/refine",
     "type": "module",
+    "private": false,
     "version": "0.0.0-beta.1",
     "exports": {
         ".": {
