@@ -8,13 +8,13 @@ import type { ErrorHandler } from './hooks/useHandleError.ts'
 import { useHandleError } from './hooks/useHandleError.ts'
 import { ErrorHandlerContext } from './contexts/error.ts'
 
-type Props = ParentProps<{
+export interface DataProps {
     dataProvider?: DataProvider | DataProviders
     notification?: NotificationProvider
     errorHandler?: ErrorHandler
-}>
+}
 
-export function DataContextProvider(props: Props) {
+export function DataContextProvider(props: ParentProps<DataProps>) {
     const providerValue = createMemo(() => {
         if (props.dataProvider) {
             if (
